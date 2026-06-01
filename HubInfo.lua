@@ -9,7 +9,7 @@ local function RequestDevice()
 end
 
 getgenv().HubInfo = {
-    Name    = "Arsenic",
+    Name    = "Rrsenic", -- The logo is the A
     Version = "1.00",
     Device  = RequestDevice(),
 }
