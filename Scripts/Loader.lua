@@ -1,7 +1,7 @@
 local Scripts = {
     BasketballLegends = {
         Script = "https://raw.githubusercontent.com/welomenchaina/Arsenic/refs/heads/main/Scripts/BasketballLegends.lua",
-        GameId = 14259168147
+        GameId = 4931927012
     }
 }
 
