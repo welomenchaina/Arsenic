@@ -9,18 +9,28 @@ local Scripts = {
     }
 }
 
+local StarterGui = game:GetService("StarterGui")
+
 local function Notify(title, text, duration)
     duration = duration or 5
 
-    if typeof(StarterGui) == "Instance" then
-        pcall(function()
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = title,
-                Text = text,
-                Duration = duration
-            })
-        end)
-    end
+    task.spawn(function()
+        repeat
+            local success = pcall(function()
+                StarterGui:SetCore("SendNotification", {
+                    Title = title,
+                    Text = text,
+                    Duration = duration
+                })
+            end)
+
+            if success then
+                break
+            end
+
+            task.wait(1)
+        until false
+    end)
 end
 
 local gameId = game.GameId
@@ -35,6 +45,8 @@ for scriptName, data in pairs(Scripts) do
             string.format("Detected %s. Loading script...", scriptName),
             5
         )
+
+        task.wait(0.5)
 
         loadstring(game:HttpGet(data.Script))()
         break
