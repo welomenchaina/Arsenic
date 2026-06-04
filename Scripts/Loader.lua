@@ -2,7 +2,10 @@ local Scripts = {
     BasketballLegends = {
         Script = "https://raw.githubusercontent.com/welomenchaina/Arsenic/refs/heads/main/Scripts/BasketballLegends.lua",
         GameId = 4931927012
-    }
+    },
+    Rivals = {
+        Script = "https://raw.githubusercontent.com/welomenchaina/Arsenic/refs/heads/main/Scripts/Rivals.lua",
+        GameId = 6035872082
 }
 
 local function Notify(title, text, duration)
