@@ -6,6 +6,7 @@ local Scripts = {
     Rivals = {
         Script = "https://raw.githubusercontent.com/welomenchaina/Arsenic/refs/heads/main/Scripts/Rivals.lua",
         GameId = 6035872082
+    }
 }
 
 local function Notify(title, text, duration)
